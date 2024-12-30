@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    333deg,
+    rgb(21, 213, 235) 0%,
+    rgb(255, 0, 191) 86.19%
+  );
+  padding: 10px;
+}
+.todo_app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo_app h2 {
+  color: rgba(34, 34, 33, 0.945);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo_app img {
+  width: 50px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(197, 188, 205);
+  border-radius: 30px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+input {
+  flex: 1;
+  color: rgb(16, 16, 16);
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 16px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: rgb(251, 43, 2);
+  color: white;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+ul li::before {
+  content: " ";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 8px;
+  background-image: url("icons8-unchecked-radio-button-100.png");
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+  cursor: pointer;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url("icons8-checked-radio-button-96.png");
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+ul li span:hover {
+  background: #555;
+}
+.msg {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  display: none;
+}

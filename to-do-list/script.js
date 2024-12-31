@@ -2,14 +2,16 @@ const input = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const button = document.querySelector("button");
 const alert = document.querySelector(".msg");
+var counter = 0;
 const addTask = () => {
   if (input.value === "") {
     alert.textContent = "Please fill in the input box";
     alert.style.color = "red";
     alert.style.display = "block";
   } else {
+    counter++;
     let li = document.createElement("li");
-    li.textContent = input.value;
+    li.textContent = `task ${counter} : ${input.value} `;
     listContainer.appendChild(li);
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
@@ -35,6 +37,7 @@ listContainer.addEventListener(
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
       saveData();
+      counter = 0;
     }
   },
   false

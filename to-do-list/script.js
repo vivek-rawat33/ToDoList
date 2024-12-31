@@ -11,7 +11,7 @@ const addTask = () => {
   } else {
     counter++;
     let li = document.createElement("li");
-    li.textContent = `task ${counter} : ${input.value} `;
+    li.textContent = `task ${counter} - ${input.value} `;
     listContainer.appendChild(li);
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
